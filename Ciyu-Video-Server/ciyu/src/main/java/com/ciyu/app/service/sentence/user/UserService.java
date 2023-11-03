@@ -1,4 +1,4 @@
-package com.ciyu.app.service.user;
+package com.ciyu.app.service.sentence.user;
 
 import com.ciyu.app.pojo.User;
 

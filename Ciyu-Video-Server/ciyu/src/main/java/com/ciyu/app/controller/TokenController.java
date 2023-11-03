@@ -1,37 +1,20 @@
 package com.ciyu.app.controller;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
 import com.ciyu.app.dto.token.RefreshTokenData;
 import com.ciyu.app.dto.token.TokenDto;
 import com.ciyu.app.dto.token.VerificationResult;
 import com.ciyu.app.exception.BadRequestException;
 import com.ciyu.app.exception.UnauthorizedException;
-import com.ciyu.app.pojo.User;
 import com.ciyu.app.security.IgnoreSecurity;
 import com.ciyu.app.service.token.TokenService;
-import com.ciyu.app.service.user.UserService;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ciyu.app.service.sentence.user.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.io.IOException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import static org.springframework.http.HttpHeaders.AUTHORIZATION;
-import static org.springframework.http.HttpStatus.FORBIDDEN;
-import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequiredArgsConstructor

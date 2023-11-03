@@ -4,20 +4,16 @@ package com.ciyu.app.security;
 import com.ciyu.app.exception.UnauthorizedException;
 import com.ciyu.app.pojo.User;
 import com.ciyu.app.service.token.TokenService;
-import com.ciyu.app.service.user.UserService;
-import lombok.NoArgsConstructor;
+import com.ciyu.app.service.sentence.user.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
-import java.util.Optional;
 
 @Component @RequiredArgsConstructor @Slf4j
 public class AuthInterceptor implements HandlerInterceptor {

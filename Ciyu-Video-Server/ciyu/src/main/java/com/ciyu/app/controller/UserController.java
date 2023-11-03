@@ -2,12 +2,9 @@ package com.ciyu.app.controller;
 
 import com.ciyu.app.dto.user.RegisterDto;
 import com.ciyu.app.exception.PhoneAlreadyExistsException;
-import com.ciyu.app.pojo.Glossary;
 import com.ciyu.app.pojo.User;
-import com.ciyu.app.pojo.Word;
-import com.ciyu.app.security.CurrentUser;
 import com.ciyu.app.security.IgnoreSecurity;
-import com.ciyu.app.service.user.UserService;
+import com.ciyu.app.service.sentence.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
